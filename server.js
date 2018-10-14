@@ -1,4 +1,5 @@
 const express=require('express');
+const port=process.env.PORT || 3000;
 const fs =require('fs');
 const app=express();
 
@@ -70,7 +71,7 @@ app.get('/bad',(req,res)=>{
     });
 
 });
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
-  console.log('serveer running on port 3000');
+  console.log(`serveer running on port ${port}`);
 })
