@@ -43,7 +43,7 @@ app.get('/',(req,res)=>{
 
   res.render('home.hbs',{
     pageTitle:'home page',
-    welcomeMessage:'hi wecome to the website',
+    welcomeMessage:'hi wecome to the website'
    // currentYear: new Date().getFullYear()
     
     });
@@ -59,11 +59,23 @@ app.get('/',(req,res)=>{
 app.get('/about',(req,res)=>{
   //res.send('<h1> about page</h1>');
 res.render('about.hbs',{
-pageTitle:'about page',
+pageTitle:'about page'
 ///currentYear: new Date().getFullYear()
 
 });
 });
+
+app.get('/projects',(req,res)=>{
+  //res.send('<h1> about page</h1>');
+res.render('projects.hbs',{
+pageTitle:'Projects'
+///currentYear: new Date().getFullYear()
+
+});
+});
+
+
+
 app.get('/bad',(req,res)=>{
   res.send({
     errorMessage:'unable to connect'
